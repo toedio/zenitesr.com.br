@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zênite</title>
+    <style>
+        :root {
+            --cor-primaria: #ffffff;
+            --cor-secundaria: #0f3e8c;
+            --cor-fundo: #f5f7f9;
+            --cor-texto: #1f1f1f;
+            --cor-clara: #fff;
+            --cor-subtexto: #555;
+            --cor-footer: #ccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--cor-primaria);
+            color: var(--cor-clara);
+            padding: 20px 40px;
+        }
+
+        header img {
+            height: 250px;
+            background-color: var(--cor-primaria);
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        header div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav {
+            background: var(--cor-secundaria);
+            padding: 10px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--cor-clara);
+        }
+
+        .hero {
+            background: url("banner.png") center/cover no-repeat;
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cor-clara);
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            padding: 30px 0;
+        }
+
+        section {
+            padding: 60px 40px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service {
+            background: var(--cor-clara);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .service h3 {
+            color: var(--cor-secundaria);
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: var(--cor-subtexto);
+        }
+
+        #about {
+            background: var(--cor-clara);
+        }
+
+        #about p {
+            color: var(--cor-subtexto);
+            padding: 20px;
+            margin: 10px 30px;
+        }
+
+        #contato {
+            padding: 0;
+            background: var(--cor-secundaria);
+        }
+
+        .contact-centered {
+            color: var(--cor-clara);
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .contact-centered h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-centered p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        footer {
+            background: var(--cor-secundaria);
+            color: var(--cor-footer);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="logo.png" alt="Logo Zênite" />
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">Sobre nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Soluções Renováveis</h2>
+    </section>
+
+    <section id="about">
+        <h2 style="text-align:center; margin-bottom: 40px;">Sobre nós</h2>
+        <p>
+            A ZENITE constrói usinas solares fotovoltaicas e as arrenda para consórcios que operam no modelo de energia solar por assinatura. Nosso nome representa o ponto mais alto do céu — o Zênite — onde o sol brilha com máxima intensidade.
+            <br/><br/>
+            Com infraestrutura robusta, segurança jurídica e alto desempenho energético, viabilizamos operações sustentáveis e acessíveis para milhares de cearenses. Nosso propósito é claro: tornar a energia limpa uma realidade cada vez mais próxima de todos.
+        </p>
+    </section>
+
+    <section id="servicos">
+        <h2 style="text-align:center; margin-bottom: 40px;">Nossos Serviços</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Usinas Solares Fotovoltaicas</h3>
+                <p>Construímos e arrendamos usinas solares de alto desempenho.</p>
+            </div>
+            <div class="service">
+                <h3>Operações Sustentáveis e Acessíveis</h3>
+                <p>Viabilizamos o modelo de energia por assinatura com segurança e eficiência.</p>
+            </div>
+            <div class="service">
+                <h3>Democratização da Energia Limpa</h3>
+                <p>Tornamos a energia limpa uma realidade acessível para todos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="contact-centered">
+            <p>Rua Manoel Borges, 191, Ibicua, Piquet Carneiro, CE</p>
+            <p>terciocelestino@gmail.com</p>
+            <p>(85) 8653-9438</p>
+            <p>CNPJ: 45.657.645/0001-30</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Zênite. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>
